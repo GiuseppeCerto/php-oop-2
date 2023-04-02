@@ -1,7 +1,6 @@
 <?php
 
 class Product {
-    private $id;
     private $name;
     private $description;
     private $price;
@@ -9,7 +8,7 @@ class Product {
     private $category;
 
     public function __construct($id, $name, $description, $price, $image, $category) {
-        $this->id = $id;
+
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
@@ -17,19 +16,11 @@ class Product {
         $this->category = $category;
     }
 
-    public function getId($id) {
-        return $this->id;
-    }
-
-    public function setId() {
-        return $this->id;
-    }
-
-    public function getName($name) {
+    public function getName($newValue) {
         return $this->name;
     }
 
-    public function setName() {
+    public function setName($newValue) {
         return $this->name;
     }
 
@@ -38,7 +29,7 @@ class Product {
     }
 
 
-    public function setDescription() {
+    public function setDescription($newValue) {
         return $this->description;
     }
 
@@ -46,7 +37,7 @@ class Product {
         return $this->price;
     }
 
-    public function setPrice() {
+    public function setPrice($newValue) {
         return $this->price;
     }
 
@@ -54,7 +45,7 @@ class Product {
         return $this->image;
     }
 
-    public function setImage() {
+    public function setImage($newValue) {
         return $this->image;
     }
 
@@ -62,7 +53,7 @@ class Product {
         return $this->category;
     }
 
-    public function setCategory() {
+    public function setCategory($newValue) {
         return $this->category;
     }
 }

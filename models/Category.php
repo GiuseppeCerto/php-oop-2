@@ -1,7 +1,7 @@
 <?php
 
 class Category{
-    public $type = "Gatto";
+    public $type = "Cat";
     public $image;
 
     public function __construct($image)  {
@@ -9,8 +9,8 @@ class Category{
     }
 
     public function getType() {
-        if ($this->type === "Cane") {
-            return "Cane";
+        if ($this->type === "Dog") {
+            return "Dog";
         }
         return $this->type;
     }
