@@ -1,7 +1,12 @@
 <?php 
-    require_once "./Product.php";
+    require_once "./models/Product.php";
+    require_once "./models/Food.php";
+    require_once "./models/Accessories.php";
+    require_once "./models/Category.php";
 
+    $food1 = new Food(3,"Croccantini","buoni","15.50","url","Gatto","12/05/25","Sana");
 
+    var_dump($food1)
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +19,9 @@
     <title>PHO OOP 2</title>
 </head>
 <body>
+    <?php
 
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
