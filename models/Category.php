@@ -1,12 +1,8 @@
 <?php
 require_once "./models/Product.php";
 trait Category{
-    public $type = "Cat";
+    public $type;
     public $image;
-
-    public function __construct($image)  {
-        $this->image = $image;
-    }
 
     public function setType($newValue) {
         if ($this->type === "Dog") {
@@ -15,6 +11,7 @@ trait Category{
         }elseif($this->type === "Cat"){
             return $this->image = "<i class=\"fa-solid fa-cat\>";
         }
+        return $this->type
     }
 
     public function getType() {
