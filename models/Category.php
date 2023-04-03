@@ -17,7 +17,7 @@ trait Category{
         }
     }
 
-    public function getType($type) {
+    public function getType() {
         return $this->type;
     }
 }

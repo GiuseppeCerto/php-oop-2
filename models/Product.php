@@ -15,7 +15,7 @@ class Product {
         $this->price = $price;
     }
 
-    public function getName($newValue) {
+    public function getName() {
         return $this->name;
     }
 
@@ -23,7 +23,7 @@ class Product {
         return $this->name;
     }
 
-    public function getDescription($description) {
+    public function getDescription() {
         return $this->description;
     }
 
@@ -32,7 +32,7 @@ class Product {
         return $this->description;
     }
 
-    public function getPrice($price) {
+    public function getPrice() {
         return $this->price;
     }
 
