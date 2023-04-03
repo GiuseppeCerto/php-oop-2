@@ -1,19 +1,18 @@
 <?php
 
 class Product {
+
+    use Category;
     private $name;
     private $description;
     private $price;
-    private $image;
     private $category;
 
-    public function __construct($id, $name, $description, $price, $image, $category) {
+    public function __construct($id, $name, $description, $price, $image) {
 
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
-        $this->image = $image;
-        $this->category = $category;
     }
 
     public function getName($newValue) {
@@ -39,22 +38,6 @@ class Product {
 
     public function setPrice($newValue) {
         return $this->price;
-    }
-
-    public function getImage($image) {
-        return $this->image;
-    }
-
-    public function setImage($newValue) {
-        return $this->image;
-    }
-
-    public function getCategory($category) {
-        return $this->category;
-    }
-
-    public function setCategory($newValue) {
-        return $this->category;
     }
 }
 

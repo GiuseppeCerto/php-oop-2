@@ -3,6 +3,7 @@ require_once "./models/Product.php";
 
 class Food extends Product{
 
+    use Category;
     private $expiration;
     private $brand;
     

@@ -2,6 +2,8 @@
 require_once "./models/Product.php";
 
 class Accessories extends Product {
+
+    use Category;
     private $size;
     private $material;
   

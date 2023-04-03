@@ -3,6 +3,7 @@ require_once "./models/Product.php";
 
 class Toy extends Product {
 
+    use Category;
     private $brand;
     private $material;
     
@@ -28,6 +29,7 @@ class Toy extends Product {
     public function getMaterial($material) {
         return $this->material;
     }
+
 
     public function printCardHTML() {
         ?>

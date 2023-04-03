@@ -1,6 +1,6 @@
 <?php
-
-class Category{
+require_once "./models/Product.php";
+trait Category{
     public $type = "Cat";
     public $image;
 
@@ -8,14 +8,16 @@ class Category{
         $this->image = $image;
     }
 
-    public function getType() {
+    public function setType($newValue) {
         if ($this->type === "Dog") {
-            return "Dog";
+           return $this->image = "<i class=\"fa-solid fa-dog\>";
+            
+        }elseif($this->type === "Cat"){
+            return $this->image = "<i class=\"fa-solid fa-cat\>";
         }
-        return $this->type;
     }
 
-    public function setType() {
+    public function getType($type) {
         return $this->type;
     }
 }
