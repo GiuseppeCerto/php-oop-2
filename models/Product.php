@@ -1,14 +1,12 @@
 <?php
-
+require_once "./models/Category.php";
 class Product {
 
     use Category;
     private $name;
     private $description;
     private $price;
-    private $category;
-
-    public function __construct($id, $name, $description, $price, $image) {
+    public function __construct($name, $description, $price) {
 
         $this->name = $name;
         $this->description = $description;

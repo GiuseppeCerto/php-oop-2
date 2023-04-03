@@ -5,16 +5,28 @@
     require_once "./models/Toy.php";
     require_once "./models/Category.php";
 
-    $food1 = new Food(3687,"Croccantini","Croccanti e gustose",15.55,"12/05/25","Sana");
-    $food1->$type = "Cat";
-    $food2 = new Food(2356,"Scatoletta umido","Spaziate al pollo",23.99,"22/10/23","AniSalu");
-    $food3 = new Food(6541,"Scatoletta umido","Gusto manzo e tacchino",20.99,"10/09/23","AniSalu");
+    $food1 = new Food("Croccantini","Cro",15.55,"12/05/25","Sana");
+    $food1->setType("Dog");
 
-    $toy1 = new Toy(2456,"Pallina gommosa","Pallina ricreativa per animali",15.99,"PetFun","100% Plastic");
-    $toy2 = new Toy(2785,"Corda per cani","Corda robusta per cani",10.99,"Doggy","100% Coton");
+    $food2 = new Food("Scatoletta umido","Spaziate al pollo",23.99,"22/10/23","AniSalu");
+    $food2->setType("Cat");
 
-    $accessory1 = new Accessories(8569,"Guinzaglio","Guinzaglio in nylon",22.00,"Doggy","L","100% Nylon");
-    $accessory2 = new Accessories(3759,"Cuccia","Cuccetta per gatti",32.99,"PetFun","One Size","100% Nylon");
+    $food3 = new Food("Scatoletta umido","Gusto manzo e tacchino",20.99,"10/09/23","AniSalu");
+    $food3->setType("Cat");
+
+    $toy1 = new Toy("Pallina gommosa","Pallina ricreativa per animali",15.99,"PetFun","100% Plastic");
+    $toy1->setType("Dog");
+
+    $toy2 = new Toy("Corda per cani","Corda robusta per cani",10.99,"Doggy","100% Coton");
+    $toy2->setType("Dog");
+
+
+    $accessory1 = new Accessories("Guinzaglio","Guinzaglio in nylon",22.00,"Doggy","L","100% Nylon");
+    $accessory1->setType("Dog");
+
+    $accessory2 = new Accessories("Cuccia","Cuccetta per gatti",32.99,"PetFun","One Size","100% Nylon");
+    $accessory2->setType("Cat");
+
 ?>
 
 <!DOCTYPE html>

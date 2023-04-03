@@ -1,5 +1,6 @@
 <?php
 require_once "./models/Product.php";
+require_once "./models/Category.php";
 
 class Toy extends Product {
 
@@ -7,11 +8,11 @@ class Toy extends Product {
     private $brand;
     private $material;
     
-    public function __construct($id, $name, $description, $price, $image, $brand, $material) {
+    public function __construct($name, $description, $price, $brand, $material) {
         $this->brand = $brand;
         $this->material = $material;
 
-        parent::__construct($id, $name, $description, $price, $image);
+        parent::__construct($name, $description, $price);
     }
 
     public function setBrand($newValue) {
@@ -41,7 +42,7 @@ class Toy extends Product {
                         <li><strong>Product Name:</strong> <?php echo $this->getName() ?></li>
                         <li><strong>Description:</strong> <?php echo $this->getDescription() ?></li>
                         <li><strong>Price:</strong> <?php echo $this->getPrice() ?></li>
-                        <li><strong>Category:</strong> <?php echo $this->getType() . " " . $this->$image() ?></li>
+                        <li><strong>Category:</strong> <?php echo $this->getType() . ' ' ?><i class= "<?php echo $this->image?>" ></i></li>
                         <li><strong>Brand:</strong> <?php echo $this->getMaterial() ?></li>
                         <li><strong>Material:</strong> <?php echo $this->getBrand() ?></li>
                     </ul>

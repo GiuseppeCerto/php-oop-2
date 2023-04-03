@@ -5,13 +5,20 @@ trait Category{
     public $image;
 
     public function setType($newValue) {
-        if ($this->type === "Dog") {
-           return $this->image = "<i class=\"fa-solid fa-dog\>";
+        if ($newValue === "Dog") {
+           $this->image ="fa-solid fa-dog";
+           $this->type = "Dog";
+
             
-        }elseif($this->type === "Cat"){
-            return $this->image = "<i class=\"fa-solid fa-cat\>";
+        }elseif($newValue === "Cat"){
+            $this->image ="fa-solid fa-cat";
+            $this->type = "Cat";
+
+        }elseif($newValue != "Cat" || $newValue != "Dog"){
+            $this->type = "Non valido";
+            throw new Exception("La categoria inserita non ha prodotto risultati");
         }
-        return $this->type
+        return;
     }
 
     public function getType() {

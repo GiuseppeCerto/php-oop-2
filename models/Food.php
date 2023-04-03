@@ -1,5 +1,6 @@
 <?php
 require_once "./models/Product.php";
+require_once "./models/Category.php";
 
 class Food extends Product{
 
@@ -7,12 +8,12 @@ class Food extends Product{
     private $expiration;
     private $brand;
     
-    public function __construct($id, $name, $description, $price, $image, $expiration, $brand) {
+    public function __construct($name, $description, $price, $expiration, $brand) {
 
         $this->expiration = $expiration;
         $this->brand = $brand;
 
-        parent::__construct($id, $name, $description, $price, $image);
+        parent::__construct($name, $description, $price,);
     }
 
     public function setExpiration($newValue) {
@@ -42,7 +43,7 @@ class Food extends Product{
                         <li><strong>Product Name:</strong> <?php echo $this->getName() ?></li>
                         <li><strong>Description:</strong> <?php echo $this->getDescription() ?></li>
                         <li><strong>Price:</strong> <?php echo $this->getPrice() ?></li>
-                        <li><strong>Category:</strong> <?php echo $this->getType() . " " . $this->$image ?></li>
+                        <li><strong>Category:</strong> <?php echo $this->getType() . ' ' ?><i class="<?php echo $this->image?>" ></i></li>
                         <li><strong>Expiration:</strong> <?php echo $this->getExpiration() ?></li>
                         <li><strong>Brand:</strong> <?php echo $this->getBrand() ?></li>
                     </ul>
